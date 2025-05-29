@@ -14,13 +14,8 @@ jobs:
 
     strategy:
       matrix:
-        goos: [ windows, darwin, linux ]
+        goos: [ darwin ]
         goarch: [ amd64, arm64 ]
-        exclude:
-          - goos: windows
-            goarch: arm64
-          - goos: linux
-            goarch: arm64
 
     steps:
       - uses: actions/checkout@v4
